@@ -59,6 +59,8 @@ libero_suites = [
     "libero_goal",
     "libero_90",
     "libero_10",
+    "libero_object_aff",
+    "libero_object_aff_val"
 ]
 task_maps = {}
 max_len = 0
@@ -181,6 +183,20 @@ class LIBERO_OBJECT(Benchmark):
     def __init__(self, task_order_index=0):
         super().__init__(task_order_index=task_order_index)
         self.name = "libero_object"
+        self._make_benchmark()
+
+@register_benchmark
+class LIBERO_OBJECT_AFF(Benchmark):
+    def __init__(self, task_order_index=0):
+        super().__init__(task_order_index=task_order_index)
+        self.name = "libero_object_aff"
+        self._make_benchmark()
+
+@register_benchmark
+class LIBERO_OBJECT_AFF_VAL(Benchmark):
+    def __init__(self, task_order_index=0):
+        super().__init__(task_order_index=task_order_index)
+        self.name = "libero_object_aff_val"
         self._make_benchmark()
 
 
